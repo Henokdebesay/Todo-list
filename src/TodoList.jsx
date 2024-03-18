@@ -27,13 +27,13 @@ function TodoList() {
   return (
     <body>
       <div className='list'> 
-      <h1>To-Do List</h1>
+      <h1>To-Do App</h1>
       <form className="form" onSubmit={handleSubmit}>
         <input
           type="text"
           value={inputValue}
           onChange={handleChange}
-          placeholder="Enter a task..."
+          placeholder="Enter your task"
         />
         <button className="button" type="submit">Add</button>
       </form>
@@ -41,7 +41,7 @@ function TodoList() {
         {todos.map((todo, index) => (
           <li key={index}>
             {todo}
-            <button onClick={() => handleDelete(index)}>Delete</button>
+            <button onClick={() => handleDelete(index)}>Remove</button>
           </li>
         ))}
       </ul>
