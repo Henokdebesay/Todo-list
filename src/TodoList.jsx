@@ -9,19 +9,6 @@ function TodoList() {
     setInputValue(event.target.value);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (inputValue.trim() !== '') {
-      setTodos([...todos, inputValue]);
-      setInputValue('');
-    }
-  };
-
-  const handleDelete = (index) => {
-    const newTodos = [...todos];
-    newTodos.splice(index, 1);
-    setTodos(newTodos);
-  };
 
   return (
     <div>
