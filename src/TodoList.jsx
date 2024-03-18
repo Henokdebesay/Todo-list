@@ -25,7 +25,8 @@ function TodoList() {
 
 
   return (
-    <div className='list'> 
+    <body>
+      <div className='list'> 
       <h1>To-Do List</h1>
       <form className="form" onSubmit={handleSubmit}>
         <input
@@ -34,7 +35,7 @@ function TodoList() {
           onChange={handleChange}
           placeholder="Enter a task..."
         />
-        <button type="submit">Add</button>
+        <button className="button" type="submit">Add</button>
       </form>
       <ul>
         {todos.map((todo, index) => (
@@ -45,6 +46,8 @@ function TodoList() {
         ))}
       </ul>
     </div>
+    </body>
+    
   );
 }
 
