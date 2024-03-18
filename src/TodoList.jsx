@@ -25,9 +25,9 @@ function TodoList() {
 
 
   return (
-    <div>
+    <div className='list'> 
       <h1>To-Do List</h1>
-      <form onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <input
           type="text"
           value={inputValue}
