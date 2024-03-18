@@ -9,6 +9,14 @@ function TodoList() {
     setInputValue(event.target.value);
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (inputValue.trim() !== '') {
+      setTodos([...todos, inputValue]);
+      setInputValue('');
+    }
+  };
+
 
   return (
     <div>
