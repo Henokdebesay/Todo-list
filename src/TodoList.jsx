@@ -17,6 +17,12 @@ function TodoList() {
     }
   };
 
+  const handleDelete = (index) => {
+    const newTodos = [...todos];
+    newTodos.splice(index, 1);
+    setTodos(newTodos);
+  };
+
 
   return (
     <div>
